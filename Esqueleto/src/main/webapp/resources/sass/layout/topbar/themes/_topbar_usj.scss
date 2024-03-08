@@ -1,0 +1,15 @@
+.layout-topbar-usj {
+    $topbarBgColor: #db9800;
+    $topbarBoxShadow: 0 2px 10px 0 rgba(25, 26, 28, 0.12);
+    $topbarItemTextColor: #fffffe;
+    $topbarItemTextHoverBgColor:#cd6910;
+    $topbarItemBgColor:#cd6910;
+    $topbarItemSeparatorBorderColor:#cd6910;
+    $topbarItemSubmenuBgColor: #ffffff;
+    $topbarItemSubmenuTextColor: #191a1c;
+    $topbarItemSubmenuSecondaryTextColor: #8b8e90;
+    $topbarItemSubmenuItemHoverBgColor: #EBEDEF;
+    $topbarItemSubmenuBoxShadow: 0 2px 8px 0 rgba(25, 26, 28, 0.12);
+
+    @import '../_topbar_theme';
+}

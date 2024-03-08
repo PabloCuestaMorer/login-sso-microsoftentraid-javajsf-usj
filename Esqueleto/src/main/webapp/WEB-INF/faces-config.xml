@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<faces-config xmlns="https://jakarta.ee/xml/ns/jakartaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-facesconfig_3_0.xsd"
+              version="3.0">
+    
+    <application>
+        <locale-config>
+            <default-locale>es</default-locale>
+        </locale-config>
+        
+        <resource-bundle>
+            <base-name>
+                messages
+            </base-name>
+            <var>msgs</var>
+        </resource-bundle>
+        
+        <message-bundle>systemMessages</message-bundle>
+
+    </application>
+    
+    <context-param>
+        <param-name>jakarta.faces.PARTIAL_STATE_SAVING</param-name>
+        <param-value>false</param-value>
+    </context-param>            
+    
+    <lifecycle>
+        <phase-listener>es.usj.lg.seguridad.LoggedInCheck</phase-listener>
+    </lifecycle>               
+
+    <!-- ***********************************************************************-->    
+    <!--                Managed bean del menú de la aplicación                  -->
+    <!-- ***********************************************************************-->
+    <managed-bean>
+        <managed-bean-name>menu</managed-bean-name>
+        <managed-bean-class>es.usj.lg.web.mbeans.menu.Menu</managed-bean-class>       
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+    
+    <managed-bean>
+        <managed-bean-name>usuarioLogin</managed-bean-name>
+        <managed-bean-class>es.usj.lg.web.mbeans.support.UsuarioLogin</managed-bean-class>                        
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+    
+    <!-- ***********************************************************************-->
+    <!--                        MB de Servicios                                 -->
+    <!-- ***********************************************************************-->    
+       
+    
+    <!-- *********************************************************************** -->
+    <!--                       MB de soporte                                     -->
+    <!-- *********************************************************************** -->       
+    
+    
+    <!-- ***********************************************************************-->
+    <!--                        MB de model                                     -->
+    <!-- ***********************************************************************-->
+    
+    
+    <!-- *********************************************************************** -->
+    <!--                         MB de formularios                               -->
+    <!-- *********************************************************************** -->
+    <managed-bean>
+        <managed-bean-name>login</managed-bean-name>
+        <managed-bean-class>es.usj.lg.web.mbeans.backing.LoginForm</managed-bean-class>
+        <managed-bean-scope>view</managed-bean-scope>        
+        <managed-property>
+            <property-name>usuarioLogin</property-name>
+            <value>#{usuarioLogin}</value>
+        </managed-property>        
+    </managed-bean>          
+    
+    <managed-bean>
+        <managed-bean-name>avisoForm</managed-bean-name>
+        <managed-bean-class>es.usj.lg.web.mbeans.backing.AvisoForm</managed-bean-class>                           
+        <managed-bean-scope>view</managed-bean-scope>
+    </managed-bean>          
+    
+    <!-- ***********************************************************************-->
+    <!--                    Navegación desde el menú                            -->
+    <!-- ***********************************************************************-->
+    <navigation-rule>
+        <from-view-id>/*</from-view-id>
+        <navigation-case>
+            <from-outcome>Login</from-outcome>
+            <to-view-id>/login.xhtml</to-view-id>
+            <redirect />
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Vacia</from-outcome>
+            <to-view-id>/vacia.xhtml</to-view-id>
+            <redirect />
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>ErrorConexion</from-outcome>
+            <to-view-id>/errorConexion.xhtml</to-view-id>
+            <redirect />
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>ErrorPeticion</from-outcome>
+            <to-view-id>/errorPeticion.xhtml</to-view-id>
+            <redirect />
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Error</from-outcome>
+            <to-view-id>/error.xhtml</to-view-id>
+            <redirect />
+        </navigation-case>
+    </navigation-rule>
+    
+</faces-config>
+        

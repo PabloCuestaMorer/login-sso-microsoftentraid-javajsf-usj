@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context antiResourceLocking="false" path="/Login">
+  <!--DESARROLLO-->
+  <!--  <Resource auth="Container" driverClassName="com.mysql.cj.jdbc.Driver" maxIdle="30" maxTotal="100" maxWaitMillis="10000" 
+            name="jdbc/MySqlUtiles" password="7L9uhJWM" testOnBorrow="true" type="javax.sql.DataSource" 
+            url="jdbc:mysql://midas5des.usj.es:3306/utilesdes" username="user_util" validationQuery="SELECT 1"/>
+  
+  <Resource auth="Container" driverClassName="com.mysql.cj.jdbc.Driver" maxIdle="30" maxTotal="100" maxWaitMillis="10000" 
+            name="jdbc/MySqlMiddleware" password="JlIb17%02" testOnBorrow="true" type="javax.sql.DataSource" 
+            url="jdbc:mysql://midas5des.usj.es:3306/middlewaredes" username="user_mid" validationQuery="SELECT 1"/>-->
+</Context>

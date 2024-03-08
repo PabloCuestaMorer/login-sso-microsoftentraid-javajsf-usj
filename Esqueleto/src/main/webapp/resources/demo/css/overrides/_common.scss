@@ -1,0 +1,141 @@
+.customer-badge {
+    border-radius: 2px;
+    padding: .25em .5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: .3px;
+
+    &.status-qualified, &.status-activo, &.status-active, &.status-actif, &.status-activa, &.status-aceptado, &.status-aprobado {
+        background: #C8E6C9;
+        color: #256029;
+    }
+
+    &.status-unqualified, &.status-inactivo, &.status-inactive, &.status-inactif, &.status-pendiente, &.status-denegado, &.status-denegada, &.status-cancelado {
+        background: #FFCDD2;
+        color: #C63737;
+    }
+
+    &.status-negotiation, &.status-validacion, &.status-solicitado, &.status-enevaluacion {
+        background: #FEEDAF;
+        color: #8A5340;
+    }
+
+    &.status-new, &.status-inicial, &.status-guardado, &.status-pendiente {
+        background: #B3E5FC;
+        color: #23547B;
+    }
+
+    &.status-renewal, &.status-cerrado, &.status-finalizada, &.status-finalizado {
+        background: #ECCFFF;
+        color: #694382;
+    }
+
+    &.status-proposal, &.status-desarrollo, &.status-revisado, &.status-planificacion {
+        background: #FFD8B2;
+        color: #805B36;
+    }
+
+    &.status-supervision {
+        background: #cefbfc;
+        color: #23547B;
+    }
+}
+
+.list-demo .product-name {
+    font-size: 1.3rem !important;
+    text-align: justify;
+}
+
+.list-demo .product-list-item .idiomaGuia {
+    width: 30px !important;
+    margin-right: 2rem;
+}
+
+.list-demo .product-list-item .idiomaGuia img {
+    width: 30px !important;
+}
+
+@media screen and (max-width: 576px) {
+    .list-demo .product-list-item .idiomaGuia {
+        margin: 0rem 0;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .list-demo .product-list-item .idiomaGuia img {
+        margin: 0.5rem 0;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .list-demo .product-list-item .product-list-detail .product-description .ui-chip {
+        margin-top: 1rem;
+    }
+}
+
+/*.list-demo .product-list-item .product-list-action{
+    flex-direction: row;
+}*/
+
+.list-demo .product-list-item .product-list-action button {
+    margin-right: 1rem;
+}
+
+.list-demo .product-list-item .product-list-action button:last-child {
+    margin-right: 0rem;
+}
+
+.list-demo .product-list-item .product-list-action-grafica{
+    flex-direction: row;
+}
+
+@media screen and (max-width: 576px) {
+    .list-demo .product-list-item .product-list-action-grafica {
+        flex-direction: column;
+        -webkit-box-align: center;
+    }
+}
+
+.list-demo {
+    .product-list-item {
+        .product-list-detail-total {
+            flex: 1 1 0;
+            -ms-flex: 1 1 0px;
+            margin-right: 5rem;
+            text-align: right;
+        }
+
+        .product-list-action-total {
+            @include flex();
+            @include flex-direction-column();
+            margin-right: 1.5rem;
+        }
+
+    }
+}
+
+@media screen and (max-width: $phoneBreakpoint) {
+    .list-demo {
+        .product-list-item {
+            .product-list-detail-total {
+                text-align: center;
+                margin-right: 0rem;
+            }
+
+            .product-list-action-total {
+                @include flex();
+                @include flex-direction-column();
+                margin-right: 0rem;
+            }
+
+            .product-list-action-total {
+                margin-top: 2rem;
+                @include flex-direction-row();
+                @include flex-justify-between();
+                @include flex-align-center();
+                width: 100%;
+            }
+        }
+    }
+}

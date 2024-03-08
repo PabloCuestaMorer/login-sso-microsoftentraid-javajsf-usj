@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui">
+
+    <div class="layout-footer">
+        <p:graphicImage name="LOGO_USJ.svg" library="images"/>
+        <div >
+            <p:link target="_blank" value=" Política de privacidad " href="https://www.usj.es/politica-de-privacidad" style="align-items: center;"/>
+            <br/>
+            <div style="align-items: center; border: none !important">
+                © #{menu.anyo} <b>UNIVERSIDAD SAN JORGE</b> | <a href="mailto:info@usj.es">soporte-si@usj.es</a><br/>
+                Campus Universitario Villanueva de Gállego - Autovía A-23 Zaragoza-Huesca Km. 299 - 50.830 Villanueva de Gállego (Zaragoza)
+            </div>
+
+        </div>
+        <h:outputText value="v#{menu.version}" />
+    </div>
+</ui:composition>

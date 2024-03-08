@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <f:view locale="es">
+        <h:head>
+            <f:facet name="first">
+                <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+                <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+                <meta name="apple-mobile-web-app-capable" content="yes" />
+                <link rel="shortcut icon" type="image/x-icon" href="#{resource['images/usjgrupo_favicon.jpg']}" />
+            </f:facet>
+
+            <title>#{msgs.NombreAplicacion}</title>
+        </h:head>
+
+        <h:body styleClass="login-body">
+            <div class="login-topbar">
+                <h:link >
+                    <p:graphicImage name="logoUSJ.png" library="images"/>
+                </h:link>
+
+            </div>
+
+            <p:growl id="messages" showDetail="true"/> 
+
+            <h:form id="loginForm">
+                <div class="login-wrapper">
+                    <div class="login-panel">
+                        <div class="login-title">
+                            <h4>#{msgs.NombreAplicacion}</h4>
+                            <span>
+                                <h:outputText value="#{msgs.InfoApp}" />
+                            </span>
+                        </div>
+                        <div class="login-forms-wrapper">
+                            <div class="form-tabs">
+                                <div class="tab tab-1 active-tab">#{msgs.Login}</div>
+                            </div>
+                            <div class="login-forms">
+                                <div class="login-form login">
+                                    <div class="form-group">
+                                        <span>#{msgs.Usuario}</span>
+                                        <p:inputText id="usuario" maxlength="50" value="#{login.usuario.username}" placeholder="#{msgs.IntroduzcaUsuario}" />
+                                    </div>
+                                    <div class="form-group">
+                                        <span>#{msgs.Contrasena}</span>
+                                        <p:password id="contrasena" maxlength="50" value="#{login.usuario.password}" placeholder="#{msgs.EscribeContrasena}" />
+                                    </div>
+                                    <div class="form-footer">
+                                        <div>
+                                            <p:commandButton id="cmdlogin"  value="#{msgs.Conectar}" action="#{login.submit()}" update=":messages" />
+                                        </div>                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="login-image"></div>
+                </div>
+
+            </h:form>
+
+            <h:outputStylesheet name="css/layout-usj.css" library="pandora-layout" />
+        </h:body>
+    </f:view>
+</html>

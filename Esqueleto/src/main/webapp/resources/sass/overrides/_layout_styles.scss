@@ -1,0 +1,601 @@
+/* Add your customizations of layout here */
+.layout-wrapper {
+    .layout-topbar {
+        .layout-topbar-wrapper {
+            .layout-topbar-right {
+                .layout-topbar-actions {
+                    .topbar-item {
+                        &.help {
+                            > ul {
+                                > li {
+                                    .angle-icon {
+                                        margin-left: auto;
+                                    }
+
+                                    .menu-text {
+                                        width: 100%;
+
+                                        p {
+                                            margin: 0;
+                                            padding: 0;
+
+                                            strong {
+                                                font-weight: 500;
+                                            }
+                                        }
+
+                                        span {
+                                            font-size: 12px;
+                                            width: 20px;
+                                            height: 20px;
+                                            @include flex();
+                                            @include flex-align-center();
+                                            @include flex-justify-center();
+                                            @include border-radius(50%);
+                                            margin-right: 7px;
+
+                                            background-color: #bfdffe;
+                                        }
+                                    }
+                                    &:nth-child(2) {
+                                        > .menu-text {
+                                            span {
+                                                background-color: #bfdffe;
+                                            }
+                                        }
+                                    }
+                                    &:nth-child(3) {
+                                        > .menu-text {
+                                            span {
+                                                background-color: #ffe5ce;
+                                            }
+                                        }
+                                    }
+                                    &:nth-child(4) {
+                                        > .menu-text {
+                                            span {
+                                                background-color: #cefbfc;
+                                            }
+                                        }
+                                    }
+                                    &:last-child {
+                                        > .menu-text {
+                                            border: none;
+                                            span {
+                                                background-color: #fed8f2;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        &.tags {
+                            > ul {
+                                > li {
+                                    @include flex();
+                                    flex-wrap: wrap;
+
+                                    &.layout-submenu-item {
+                                        padding: 0 8px 20px;
+                                    }
+
+                                    .tag {
+                                        font-size: 12px;
+                                        color: #326495;
+                                        display: block;
+                                        padding: 2px 4px;
+                                        border-radius: 2px;
+                                        background-color: #bfdffe;
+                                        margin: 4px;
+                                        @include transition(background-color $transitionDuration);
+
+                                        &:hover {
+                                            background-color: #99ccff;
+                                        }
+                                    }
+
+                                    &:hover {
+                                        background-color: transparent;
+                                    }
+                                }
+                            }
+                        }
+
+                        &.notifications {
+                            > a {
+                                i {
+                                    position: relative;
+
+                                    > span {
+                                        position: absolute;
+                                        width: 10px;
+                                        height: 10px;
+                                        @include border-radius(50%);
+                                        top: 8px;
+                                        right: 8px;
+                                    }
+                                }
+                            }
+                            > ul {
+                                min-width: 259px;
+                                > li {
+                                    >.menu-text {
+                                        @include flex();
+                                        @include flex-align-start();
+
+                                        p {
+                                            margin: 0;
+                                            padding: 0;
+
+                                            strong {
+                                                font-weight: 500;
+                                            }
+                                        }
+
+                                        span {
+                                            font-size: 12px;
+                                        }
+                                        > span {
+                                            > span {
+                                                font-size: 11px;
+                                            }
+
+                                            p {
+                                                font-size: 13px;
+                                            }
+                                        }
+
+                                        i {
+                                            font-size: 14px;
+                                            margin-top: 2px;
+                                            margin-right: 8px;
+                                        }
+                                    }
+
+                                    &:nth-child(2) {
+                                        i {
+                                            font-size: 14px;
+                                            color: #00acad;
+                                        }
+                                    }
+                                    &:nth-child(3) {
+                                        i {
+                                            font-size: 15px;
+                                        }
+                                    }
+                                    &:nth-child(4) {
+                                        i {
+                                            font-size: 12px;
+                                            margin-top: 4px;
+                                            color: #c03995;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        &.language {
+                            padding: 0 7px;
+
+                            a {
+                                @include flex();
+                                @include flex-align-center();
+                                @include flex-justify-between();
+                                border-radius: 2px;
+                                padding: 0 .5em;
+                                height: 36px;
+
+                                h6 {
+                                    font-size: 13px;
+                                    margin: 0;
+                                    margin-left: 8px;
+                                    margin-right: 12px;
+                                }
+
+                                img {
+                                    height: 20px;
+                                    width: auto;
+                                    margin-right: 8px;
+                                }
+
+                                i {
+                                    font-size: 14px;
+
+                                }
+                            }
+
+                            ul {
+                                > li {
+                                    .menu-text {
+                                        p {
+                                            margin: 0;
+                                            padding: 0;
+
+                                            strong {
+                                                font-weight: 500;
+                                            }
+                                        }
+
+                                        span {
+                                            font-size: 12px;
+                                        }
+
+                                        img {
+                                            width: 20px;
+                                            height: 20px;
+                                            margin-right: 8px;
+                                        }
+                                    }
+                                }
+                            }
+
+                            @media (max-width: 992px) {
+                                & + .topbar-item-v-separator {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.login-body .login-wrapper .login-image {
+    background-image: url("\#{resource['images/fondo_login.png']}") !important;
+}
+
+.menu-wrapper .layout-menu-container .layout-profile .layout-profile-button .profile-image-icons {
+    cursor: pointer;
+}
+
+.statusInactv {
+    background-image: url("\#{resource['images/connect_idle.svg']}") !important;
+}
+
+.statusActv {
+    background-image: url("\#{resource['images/connect_active.svg']}") !important;
+}
+
+.statusDisconnect {
+    background-image: url("\#{resource['images/connect_disconnected.svg']}") !important;
+}
+
+.statusInactv, .statusActv, .statusDisconnect {
+    width: 25px;
+    height: 25px;
+}
+
+pre {
+    white-space: pre-wrap;
+    font-family: "IBM Plex Sans";
+    text-align: justify !important
+}
+
+.campoTexto {
+    color: #191a1c;
+    font-weight: 500;
+    display: block;
+}
+
+.textoFila {
+    display: block !important;
+}
+
+.etiqueta {
+    color: #191a1c !important;
+}
+
+.dataview-grid.ui-dataview .ui-dataview-header {
+    border-bottom: 0 none;
+    display: none;
+}
+
+.dataview-grid-sin-borde.ui-dataview .ui-dataview-header {
+    border-bottom: 0 none;
+    display: none;
+}
+
+.dataview-grid-sin-borde.ui-dataview.ui-dataview-list .ui-dataview-row {
+    border: none !important; 
+}
+
+.margenIzda1 {
+    margin-left: 1rem;
+}
+
+.panelGrupos {
+    margin-left: 5rem;
+    margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 576px) {
+    .panelGrupos {
+        margin-left: 0;
+    }
+}
+
+.elementoCentrado {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.centrado {
+    text-align: center !important;
+}
+
+@media screen and (max-width: 576px) {
+    .centrado {
+        text-align: justify !important;
+    }
+}
+
+.columna {
+    flex: 1 1 0px;
+}
+
+.columnaCentrada {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    flex: 1 1 0px;
+    justify-content: center;
+}
+
+.columnaCentrada img {
+    width: 30px;
+}
+
+.columnaCentrada span {
+    margin-right: 1rem;
+}
+
+@media screen and (max-width: 576px) {
+    .columnaCentrada {
+        margin: 1rem;
+    }
+}
+
+.columnaDerecha {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    flex: 1 1 0px;
+    justify-content: right;
+}
+
+@media screen and (max-width: 576px) {
+    .columnaDerecha {
+        margin: 1rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .layout-dashboard .event {
+        flex-direction: column;
+    }
+}
+
+body .ui-messages ul .ui-messages-info-summary,
+body .ui-messages ul .ui-messages-warn-summary,
+body .ui-messages ul .ui-messages-error-summary,
+body .ui-messages ul .ui-messages-fatal-summary {
+    display: block;
+}
+
+body .ui-messages ul .ui-messages-info-detail,
+body .ui-messages ul .ui-messages-warn-detail,
+body .ui-messages ul .ui-messages-error-detail,
+body .ui-messages ul .ui-messages-fatal-detail {
+    white-space: pre-line;
+}
+
+/*@media screen and (max-width: 576px) {
+    body .ui-dialog .ui-dialog-footer {
+        padding: 0 1.5rem 3rem 1.5rem;
+    }
+}*/
+
+.dialogo {
+    max-width: 1200px !important;
+}
+
+@media screen and (max-width: 576px) {
+    .dialogo {
+        max-height: 600px !important;
+        overflow: auto;
+    }
+}
+
+.ui-message-info, .ui-message-error, .ui-message-warn, .ui-message-fatal {
+    margin: 0 !important;
+}
+
+.ui-row-editor-pencil {
+    width: 2.357rem !important;
+    height: 2.357rem !important;
+    line-height: 2.357rem !important;
+    background: #689F38 !important;
+    color: #ffffff !important;
+    border: 1px solid #689F38 !important;
+}
+
+.ui-row-editor {
+    display: inline-block;
+    margin-right: 0.5rem;
+}
+
+.layout-dashboard .messages .messages-content > ul > div > li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 4px 12px 12px;
+    -moz-transition: background-color 0.2s;
+    -o-transition: background-color 0.2s;
+    -webkit-transition: background-color 0.2s;
+    transition: background-color 0.2s;
+    cursor: pointer;
+}
+
+.layout-dashboard .messages .messages-content > ul > div > li > i {
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    margin-top: 4px;
+}
+
+.layout-dashboard .messages .messages-content > ul > div > li .messages-item-right {
+    padding-left: 12px;
+}
+
+.layout-dashboard .messages .messages-content > ul > div > li .messages-item-right.new-messgae > span {
+    color: #c03995;
+}
+
+.layout-dashboard .messages .messages-content > ul > div > li .messages-item-right > span {
+    font-size: 12px;
+    color: #8b8e90;
+}
+
+.layout-dashboard .messages .messages-content > ul > div > li .messages-item-right > span > i {
+    font-size: 6px;
+    vertical-align: middle;
+    margin: 0 6px;
+}
+
+.layout-dashboard .messages .messages-content > ul > div > li .messages-item-right > h5 {
+    font-size: 14px;
+    font-weight: 500;
+    color: #191a1c;
+    margin: 2px 0;
+}
+
+.layout-dashboard .messages .messages-content > ul > div > li .messages-item-right > p {
+    color: #191a1c;
+    margin: 0;
+}
+
+.layout-dashboard .messages .messages-content > ul > div > li .messages-item-right .images {
+    margin-top: 12px;
+}
+.layout-dashboard .messages .messages-content > ul > div > li .messages-item-right .images img {
+    margin-right: 12px;
+    height: auto;
+    width: 15%;
+}
+
+.layout-dashboard .messages .messages-content > ul > div > li .messages-item-right .images img.landscape {
+    width: 33%;
+}
+
+.layout-dashboard .messages .messages-content > ul > div > li:hover {
+    background-color: #f4f7f9;
+}
+
+.ui-avatar.ui-avatar-lg.icono-panel {
+    width: 2rem !important;
+    height: 2rem !important;
+    background: none repeat scroll 0 0 transparent !important;
+    line-height: 2;
+    margin-bottom: -0.5rem;
+}
+
+.RowColorPendiente {
+    background-color: #f79d7d;
+}
+
+.RowColorValidacion {
+    background-color: #F3F781;
+}
+
+.RowColorSolicitado {
+    background-color: #f7dd84;
+}
+.RowColorGuardado{
+    background-color: #81F7F3;
+}
+.RowColorVerde{
+    background-color: #C4E2A5;
+}
+
+.RowColorAmarillo{
+    background-color: #E9ED7B;
+}
+
+//este estilo es para desplegables con nombres largos en responsive para que no se muestre fuera de pantalla
+@media only screen and (max-width: 576px) {
+    .ajustarDesplegable {
+        width: 100% !important;
+        min-width: 0 !important;
+    }
+
+    .ui-selectonemenu label.ui-selectonemenu-label {
+        max-width: 50ch;
+        text-overflow: ellipsis;
+    }
+}
+
+//este estilo es para desplegables con nombres largos en responsive para que no se muestre fuera de pantalla
+@media only screen and (max-width: 640px) and (min-width: 577px) {
+    .ajustarDesplegable {
+        width: 100% !important;
+        min-width: 0 !important;
+    }
+
+    .ui-selectonemenu label.ui-selectonemenu-label {
+        max-width: 75ch;
+        text-overflow: ellipsis;
+    }
+}
+
+.derecha {
+    text-align: right;
+}
+
+.ancho100 {
+    width: 100% !important;
+    min-width: 0 !important;
+}
+
+.ancho50 {
+    width: 50% !important;
+    min-width: 0 !important;
+}
+
+@media only screen and (max-width: 640px) {
+    .ancho50 {
+        width: 100% !important;
+    }
+}
+
+.negrita {
+    font-weight: 500;
+}
+
+.link {
+    color: #335EFF !important;
+    font-size: 1.3em !important;
+    text-transform: uppercase !important;
+}
+
+.exception-body.aviso {
+  background-image: url("\#{resource['images:fondo_aviso.svg']}");
+}
+
+.exception-body.aviso .exception-wrapper .exception-content {
+  border-radius: 6px;
+  background-color: rgba(255, 255, 255, 0.97);
+}
+
+.exception-body.aviso .exception-wrapper .exception-content span {
+  color: #191a1c;
+}

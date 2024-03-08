@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+    <h:head>
+        <f:facet name="first">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+            <meta name="apple-mobile-web-app-capable" content="yes" />
+            <link rel="shortcut icon" type="image/x-icon" href="#{resource['images/usjgrupo_favicon.jpg']}" />
+        </f:facet>
+        <title>Error</title>
+    </h:head>
+
+    <h:body styleClass="exception-body error">
+        <h:form>
+            <div class="exception-topbar">
+                <h:link outcome="Login" >
+                    <p:graphicImage name="logoUSJ.png" library="images"/>
+                </h:link>
+            </div>
+            <div class="exception-wrapper">
+                <div class="exception-content">
+<!--                    <p:graphicImage name="images/pages/asset-error.svg" library="pandora-layout" />-->
+                    <h4>#{msgs.NombreAplicacion}</h4>
+                    <span>#{msgs.ErrorConexion} </span>
+                    <p:commandButton value="#{msgs.IrALogin}" action="login.xhtml?faces-redirect=true" ajax="false" />
+                </div>
+            </div>
+        </h:form>
+        <h:outputStylesheet name="css/layout-usj.css" library="pandora-layout" />
+    </h:body>
+
+</html>
