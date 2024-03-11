@@ -47,7 +47,7 @@
             <version>2.11.0</version>
         </dependency>        
         <!--persistencia mybatis-->
-<!--        <dependency>
+        <!--        <dependency>
             <groupId>org.mybatis</groupId>
             <artifactId>mybatis</artifactId>
             <version>3.5.11</version>
@@ -69,6 +69,18 @@
             <groupId>primafaces.tema.usj</groupId>
             <artifactId>pandora-usj</artifactId>
             <version>1.0.0</version>
+        </dependency>
+        <!-- Manejo de SAML https://github.com/SAML-Toolkits/java-saml -->
+        <dependency>
+            <groupId>com.onelogin</groupId>
+            <artifactId>java-saml</artifactId>
+            <version>2.9.0</version> <!-- Use the latest version available -->
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>4.0.1</version>
+            <type>jar</type>
         </dependency>
     </dependencies>
 
