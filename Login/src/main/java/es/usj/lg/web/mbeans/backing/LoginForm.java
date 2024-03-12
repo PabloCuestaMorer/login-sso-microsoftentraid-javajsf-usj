@@ -9,12 +9,16 @@
  */
 package es.usj.lg.web.mbeans.backing;
 
+import com.microsoft.aad.msal4j.IAuthenticationResult;
+import es.us.lg.msal4j.AzureADAuthenticator;
 import es.usj.lg.dto.UsuarioDto;
 import es.usj.lg.web.comun.Constants;
 import es.usj.lg.web.comun.Util;
 import es.usj.lg.web.mbeans.support.UsuarioLogin;
 import jakarta.annotation.PostConstruct;
 import jakarta.faces.application.FacesMessage;
+import jakarta.faces.context.FacesContext;
+import jakarta.servlet.http.HttpServletRequest;
 import java.io.Serializable;
 import java.util.Calendar;
 import org.apache.log4j.Logger;
@@ -121,4 +125,16 @@ public class LoginForm implements Serializable {
         }
     }
     // </editor-fold>
+
+    public void azureSignIn() {
+        try {
+            FacesContext facesContext = FacesContext.getCurrentInstance();
+            String authorizationUrl = AzureADAuthenticator.buildAuthorizationUrl("http://localhost:8080/Login"); // Adjust the redirectUri as needed
+//            facesContext.getExternalContext().redirect(authorizationUrl);
+        } catch (Exception e) {
+            e.printStackTrace();
+            // Handle error
+        }
+    }
+
 }
