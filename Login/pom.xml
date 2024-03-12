@@ -47,7 +47,7 @@
             <version>2.11.0</version>
         </dependency>        
         <!--persistencia mybatis-->
-<!--        <dependency>
+        <!--        <dependency>
             <groupId>org.mybatis</groupId>
             <artifactId>mybatis</artifactId>
             <version>3.5.11</version>
@@ -69,6 +69,11 @@
             <groupId>primafaces.tema.usj</groupId>
             <artifactId>pandora-usj</artifactId>
             <version>1.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.microsoft.azure</groupId>
+            <artifactId>msal4j</artifactId>
+            <version>1.14.3</version>
         </dependency>
     </dependencies>
 
